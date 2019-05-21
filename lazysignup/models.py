@@ -94,3 +94,10 @@ class LazyUser(models.Model):
 
     def __str__(self):
         return '{0}:{1}'.format(self.user, self.created)
+
+    @property
+    def is_lazy_user(self):
+        """
+        Always return True. This is a way to tell if the user is a Lazy User in templates.
+        """
+        return True
